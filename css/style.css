@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #b1c2b4d2;
+    margin: 0;
+    padding: 0;
+    
+}
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #0000009c;
+}
+
+.menu {
+    max-width: 1400px;
+    max-height: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul a {
+    color: rgb(255, 255, 255);
+    margin: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+}
+
+nav ul a::after {
+    content: "";
+    background-color: #ffffff;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .textobanner {
+    margin: 190px;
+    padding: 0 29px;
+}
+
+.banner .textobanner .l1 {
+    font-size: 59px;
+    color: white;
+    position: absolute;
+    left: 150px;
+    top: 230px;
+}
+
+.banner .textobanner .l2 {
+    font-size: 59px;
+    color: white;
+    position: absolute;
+    left: 290px;
+    top: 290px;
+}
+
+.banner .textobanner p {
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    padding: 5px;
+    width: 370px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-item {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #F6F2E8;
+    border-radius: 20px;
+    margin: 22px;
+    height: 400px;
+    width: 137px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  
+}
+.carousel-item h4{
+    margin-top: 10px;
+
+}
+.carousel-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 190px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.tip {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #334A00;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+}
+
+.tip:hover {
+    background-color: #1f2d02;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(134, 132, 132, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+footer{
+    background-color: #334A00;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 40px;
+    
+}
+footer ul{
+    color: white;
+    padding: 10px;
+}
+footer ul a{
+    padding: 5px;}
+.copy{
+    padding: 20px;
+    color: white;
+}
+
+.fot a :hover{
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+}
