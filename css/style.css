@@ -30,12 +30,22 @@ p {
     margin: 0 auto;
     padding: 0 5%;
 }
+ .fundo{
+    background-color: rgba(0, 0, 0, 0.363);
+    z-index: 3;
+    min-height: 120px;
+    width: 100%;
 
+
+ }
 header {
+    
+    background-image: url(".././img/menu.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
 }
 
 nav {
@@ -50,6 +60,7 @@ nav ul {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 5px;
 }
 
 nav ul a {
@@ -58,6 +69,8 @@ nav ul a {
     font-size: 15px;
     text-transform: uppercase;
     display: block;
+    font-weight: 400;
+    
 }
 
 nav ul a::after {
@@ -73,6 +86,35 @@ nav ul a::after {
 nav ul a:hover::after {
     width: 100%;
 }
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex: 1; 
+    justify-content: center; 
+}
+
+.login-icon {
+    font-size: 15px; 
+    margin-left: auto; 
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+.login-icon::after{
+    content: "";
+    background-color: #ffffff;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.login-icon:hover::after{
+    width: 100%;
+
+}
+
 
 .banner {
     display: flex;
@@ -112,13 +154,32 @@ nav ul a:hover::after {
     overflow-wrap: break-word;
 }
 
+.leaf {
+    background-color:  #cad3c8;
+    border: 1px solid  #9ebda4d2;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 20px);
+    margin:  12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+   
+}
+
+.leaf p {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: #3b3b39;
+    
+}
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 50px;
+    padding: 2px;
 }
 
 .carousel {
