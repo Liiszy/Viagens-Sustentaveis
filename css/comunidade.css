@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
+/*-------------------------------------------Tags Gerais---------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +12,6 @@
     outline: none;
     font-family: 'Inter', sans-serif;
 }
-
 body {
     background-color: #b1c2b4d2;
     margin: 0;
@@ -19,10 +21,13 @@ body {
 h3 {
     font-size: 50px;
 }
-
 p {
     color: #0000009c;
 }
+
+
+
+/*-------------------------------------------Início Header---------------------------------------*/
 
 .menu {
     max-width: 1400px;
@@ -30,14 +35,12 @@ p {
     margin: 0 auto;
     padding: 0 5%;
 }
- .fundo{
+.fundo{
     background-color: rgba(0, 0, 0, 0.363);
     z-index: 3;
     min-height: 120px;
     width: 100%;
-
-
- }
+}
 header {
     
     background-image: url(".././img/menu.jpg");
@@ -45,9 +48,7 @@ header {
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   
 }
-
 nav {
     display: flex;
     align-items: center;
@@ -55,14 +56,12 @@ nav {
     padding-top: 10px;
     text-align: center;
 }
-
 nav ul {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 5px;
 }
-
 nav ul a {
     color: rgb(255, 255, 255);
     margin: 40px;
@@ -72,7 +71,6 @@ nav ul a {
     font-weight: 400;
     
 }
-
 nav ul a::after {
     content: "";
     background-color: #ffffff;
@@ -82,7 +80,6 @@ nav ul a::after {
     margin: 0 auto;
     transition: 0.3s;
 }
-
 nav ul a:hover::after {
     width: 100%;
 }
@@ -93,7 +90,6 @@ nav ul a:hover::after {
     flex: 1; 
     justify-content: center; 
 }
-
 .login-icon {
     font-size: 15px; 
     margin-left: auto; 
@@ -109,23 +105,17 @@ nav ul a:hover::after {
     margin: 0 auto;
     transition: 0.3s;
 }
-
 .login-icon:hover::after{
     width: 100%;
-
 }
-
-
 .banner {
     display: flex;
     justify-content: center;
 }
-
 .banner .textobanner {
     margin: 190px;
     padding: 0 29px;
 }
-
 .banner .textobanner .l1 {
     font-size: 59px;
     color: white;
@@ -133,7 +123,6 @@ nav ul a:hover::after {
     left: 150px;
     top: 230px;
 }
-
 .banner .textobanner .l2 {
     font-size: 59px;
     color: white;
@@ -141,7 +130,6 @@ nav ul a:hover::after {
     left: 290px;
     top: 290px;
 }
-
 .banner .textobanner p {
     font-size: 17px;
     color: white;
@@ -155,12 +143,15 @@ nav ul a:hover::after {
 }
 
 
+
+
+/*-------------------------------------------Início Contéudo---------------------------------------*/
+
 .conteinermain {
     padding: 30px 10px;
     max-width: 1400px;
     margin: 0 auto;
     text-align: justify;
-   
 }
 .contentmain{
     background-color: #F6F2E8;
@@ -173,30 +164,13 @@ nav ul a:hover::after {
     font-size: 35px;
     margin-top: 0;
     color: #334A00;
-    
 }
-
 .contentmain p {
     margin-bottom: 5px;
-
 }
-    
-    
 .hero {
-   
     padding: 2px 20px;
-    
-
 }
-
-
-
-
-
-
-
-
-
 .post {
     background-color:  #cad3c8;
     border: 1px solid  #9ebda4d2;
@@ -205,17 +179,10 @@ nav ul a:hover::after {
     flex: 1 1 calc(50% - 20px);
     margin:  15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    
-    
 }
-
 .post h3 {
     margin-top: 0;
-   
 
-
-    
 }
 .compartilhe{
     color: #3b3b39;
@@ -223,9 +190,7 @@ nav ul a:hover::after {
     padding: 5px 18px;
     max-width: 1400px;
     margin: 0 auto;
-
     text-align: center;
-    
 }
 .exp{
     color: #334A00;
@@ -234,8 +199,13 @@ nav ul a:hover::after {
     max-width: 1400px;
     margin: 0 auto;
     text-align: center;
-
 }
+
+
+
+
+
+/*-------------------------------------------Início Formulário---------------------------------------*/
 
 form {
     background-color:  #cad3c8;
@@ -249,12 +219,10 @@ form {
    
             
 }
-
 form label {
     display: block;
     margin-top: 10px;
 }
-
 form input,
 form textarea {
     width: 100%;
@@ -263,7 +231,6 @@ form textarea {
     border: 1px solid ;
     border-radius: 4px;
 }
-
 form button {
     margin-top: 10px;
     padding: 10px 15px;
@@ -273,12 +240,10 @@ form button {
     border: none;
     cursor: pointer;
 }
-
 form button:hover {
     background: #1a4821;
     border-radius: 5px;;
 }
-
 #post-list h3{
     font-size: 25px;
 
@@ -292,15 +257,18 @@ form button:hover {
     border: none;
     cursor: pointer;
 }
-
 .delete-btn:hover {
     background: #1a4821;
     
 }
-
 .delete-btn:focus {
     outline: none;
 }
+
+
+
+
+/*-------------------------------------------Início Rodapé---------------------------------------*/
 footer{
     background-color: #334A00;
     text-align: center;
@@ -313,19 +281,285 @@ footer ul{
     padding: 10px;
 }
 footer ul a{
-    padding: 5px;}
+    padding: 5px;
+}
 .copy{
     padding: 20px;
     color: white;
 }
-
 .fot a :hover{
     transform: translateY(-5px);
     transition: transform 0.5s ease;
 }
+.frase{
+        padding-top: 30px;
+}
 
-    .frase{
-       padding-top: 30px;
+
+
+
+
+/*-------------------------------------------Início Responsividade---------------------------------------*/
+
+/* Media Query para telas com no máximo 767px */
+@media (max-width: 767px) {
+
+    /* ----- Responsividade Cabeçalho  ----- */
+    .menu {
+        padding: 0 2%;
     }
 
-  
+    .fundo {
+        min-height: 80px;
+    }
+
+    header {
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; /* Coloca o conteúdo verticalmente */
+        align-items: center; /* Centraliza todos os itens dentro do nav */
+    }
+
+    .login-icon {
+        font-size: 20px; /* Aumenta o tamanho do ícone */
+        margin-bottom: 10px; /* Espaço entre o ícone e os links */
+        display: block;
+        text-align: center; /* Centraliza o ícone */
+        margin-top: 20px; /* Espaço acima do ícone */
+        width: 100%;
+
+    }
+
+    nav ul {
+        flex-direction: column; /* Coloca os links em coluna */
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaço entre os itens da lista */
+    }
+
+    nav ul a {
+        margin: 0;
+        font-size: 15px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 20px; /* Espaço entre a navegação e o banner */
+    }
+
+    .banner .textobanner {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .banner .textobanner .l1, 
+    .banner .textobanner .l2 {
+        font-size: 36px;
+        position: static;
+    }
+
+    .banner .textobanner p {
+        font-size: 14px;
+        position: static;
+        padding: 5px;
+        width: auto;
+        word-wrap: break-word;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+
+        /* ----- Responsividade Contéudo  ----- */
+
+    .conteinermain {
+        padding: 15px;
+    }
+    
+    .contentmain {
+        padding: 15px;
+    }
+    
+    #bv {
+        font-size: 24px;
+    }
+    
+    .contentmain p {
+        margin-bottom: 10px;
+    }
+    
+    .hero {
+        padding: 10px;
+    }
+    
+    .post {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+    
+    .compartilhe {
+        font-size: 20px;
+    }
+    
+    .exp {
+        font-size: 20px;
+    }
+    
+    form {
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    form button {
+        padding: 8px 12px;
+    }
+    
+    #post-list h3 {
+        font-size: 20px;
+    }
+}
+
+/* Responsividade para telas com min-width: 768px e max-width: 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* ----- Responsividade Cabeçalho  ----- */
+    .menu {
+        padding: 0 3%;
+    }
+
+    .fundo {
+        min-height: 100px;
+    }
+
+    header {
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .login-icon {
+        font-size: 35px; 
+        margin-bottom: 25px; 
+        display: block; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        margin-top: 25px; 
+    }
+
+    nav ul {
+        flex-direction: row; 
+        justify-content: center; 
+        padding: 0;
+        list-style: none; 
+    }
+
+    nav ul li {
+        margin: 0 20px; 
+    }
+
+    nav ul a {
+        margin: 0;
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 30px; 
+    }
+
+    .banner .textobanner {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .banner .textobanner .l1, 
+    .banner .textobanner .l2 {
+        font-size: 48px; 
+        position: static;
+    }
+
+    .banner .textobanner p {
+        font-size: 16px;
+        position: static;
+        padding: 5px;
+        width: auto;
+        word-wrap: break-word;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* ----- Responsividade Contéudo  ----- */
+
+    .conteinermain {
+        padding: 20px;
+    }
+
+    .contentmain {
+        padding: 20px;
+    }
+
+    #bv {
+        font-size: 28px;
+    }
+
+    .contentmain p {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .post {
+        flex: 1 1 calc(50% - 20px);
+        margin: 10px;
+    }
+
+    .compartilhe {
+        font-size: 22px;
+    }
+
+    .exp {
+        font-size: 22px;
+    }
+
+    form {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    form button {
+        padding: 8px 12px;
+    }
+
+    #post-list h3 {
+        font-size: 22px;
+    }
+}
