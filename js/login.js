@@ -19,6 +19,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Redireciona para a página comunidade.html
         window.location.href = 'comunidade.html';
     } else {
-        alert('Usuário ou senha incorretos.');
+       
     }
   });
