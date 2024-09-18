@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
        
         // Redireciona para a página comunidade.html
-        window.location.href = 'comunidade.html';
+        window.location.href = 'index.html';
     } else {
        
     }
