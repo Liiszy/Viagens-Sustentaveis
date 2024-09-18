@@ -95,6 +95,7 @@ nav ul a:hover::after {
     margin-left: auto; 
     color: rgb(255, 255, 255);
     font-weight: 400;
+    padding-right: 10px;
 }
 .login-icon::after{
     content: "";
@@ -143,6 +144,29 @@ nav ul a:hover::after {
     overflow-wrap: break-word;
 }
 
+#name {
+    color: white;
+    padding-inline: 10px;
+}
+
+#logoutBtn {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: white;
+    
+    padding: 3px 13px;
+    cursor: pointer;
+  
+}
+#logoutBtn:hover {
+    border-color:  #193b127d;
+    color: white;
+    transition: ease-in-out 0.4s;
+}
 
 /*-------------------------------------------Início Leaf---------------------------------------*/
 
@@ -288,7 +312,6 @@ footer ul a{
         width: 100%;
 
     }
-
     nav ul {
         flex-direction: column; /* Coloca os links em coluna */
         margin-left: 0;
@@ -468,6 +491,4 @@ footer ul a{
         display: block; 
     }
 }
-
-
 
