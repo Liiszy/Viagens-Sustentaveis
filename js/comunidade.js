@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadPosts() {
         const posts = JSON.parse(localStorage.getItem('posts')) || [];
         posts.forEach((post, index) => {
-            const postElement = createPostElement(post.title, post.author, post.content, index);
+            const postElement = createPostElement(post.userName , post.author, post.content, index);
             postList.appendChild(postElement);
         });
     }
 
     // Função para criar um novo elemento de postagem
-    function createPostElement(title, author, content, index) {
+    function createPostElement(userName, author, content, index) {
         const post = document.createElement('article');
         post.className = 'post';
         post.innerHTML = `
-            <h3>${title}</h3>
+            <h3>${userName}</h3>
             <p><strong>Destino:</strong> ${author}</p>
             <p>${content}</p>
             <button class="delete-btn" data-index="${index}">Excluir</button>
@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // Pegando valores do formulário
-        const title = document.getElementById('title').value;
+        const userName = lastLoggedUser;
         const author = document.getElementById('author').value;
         const content = document.getElementById('content').value;
 
         // Criando nova postagem e adicionando à lista
         const posts = JSON.parse(localStorage.getItem('posts')) || [];
         const index = posts.length; // O novo índice é o tamanho atual do array
-        posts.push({ title, author, content });
+        posts.push({ userName, author, content });
         savePosts(posts);
 
-        const postElement = createPostElement(title, author, content, index);
+        const postElement = createPostElement(userName, author, content, index);
         postList.appendChild(postElement);
 
         // Limpando o formulário
@@ -81,13 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Exibe o nome do último usuário logado
 const lastLoggedUser = localStorage.getItem('lastLoggedUser');
-
 // Atualiza o nome do usuário e controla a visibilidade do botão de logout
 if (lastLoggedUser) {
-    document.getElementById('name').textContent = lastLoggedUser;
+document.querySelector('.namePost').textContent =lastLoggedUser;
+    document.querySelector('.name').textContent = lastLoggedUser;
     document.getElementById('logoutBtn').style.display = 'inline-block'; // Mostrar botão
 } else {
-    document.getElementById('name').textContent;
+    document.querySelector('.namePost').textContent;
+    document.querySelector('name').textContent;
     document.getElementById('logoutBtn').style.display = 'none'; // Ocultar botão
 }
 
