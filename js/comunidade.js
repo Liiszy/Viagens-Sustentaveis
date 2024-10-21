@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para criar um novo elemento de postagem
     function createPostElement(userName, author, content, index) {
         const post = document.createElement('article');
-        post.className = 'post';
+        post.className = 'post';    
         post.innerHTML = `
             <h3>${userName}</h3>
             <p><strong>Destino:</strong> ${author}</p>
