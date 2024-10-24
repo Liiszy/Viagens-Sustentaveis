@@ -14,7 +14,8 @@ if (lastLoggedUser) {
 document.getElementById('logoutBtn').addEventListener('click', function() {
     // Remove o usuário logado do localStorage
     localStorage.removeItem('lastLoggedUser');
-   
+    localStorage.removeItem('lastAcsses')
+
 
     // Redireciona para a página de login
     window.location.href = 'index.html'; // Redireciona para a página de login
