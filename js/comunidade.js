@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>${userName}</h3>
             <p><strong>Destino:</strong> ${author}</p>
             <p>${content}</p>
-            <button class="delete-btn" data-index="${index}">Excluir</button>
-        `;
+            <button class="delete-btn" data-index="${index}">Excluir</button>`;
         return post;
     }
 
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Pegando valores do formulário
         const userName = lastLoggedUser;
+        const access=  localStorage.getItem('lastAccess')
         const author = document.getElementById('author').value;
         const content = document.getElementById('content').value;
 
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Exibe o nome do último usuário logado
 const lastLoggedUser = localStorage.getItem('lastLoggedUser');
+const lastAccess=localStorage.getItem('lastAccess')
 // Atualiza o nome do usuário e controla a visibilidade do botão de logout
 if (lastLoggedUser) {
 document.querySelector('.namePost').textContent =lastLoggedUser;
@@ -96,7 +97,8 @@ document.querySelector('.namePost').textContent =lastLoggedUser;
 document.getElementById('logoutBtn').addEventListener('click', function() {
     // Remove o usuário logado do localStorage
     localStorage.removeItem('lastLoggedUser');
-   
+    localStorage.removeItem('lastAcsses')
+
 
     // Redireciona para a página de login
     window.location.href = 'index.html'; // Redireciona para a página de login
