@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadPosts() {
         const posts = JSON.parse(localStorage.getItem('posts')) || [];
         posts.forEach((post, index) => {
-            const postElement = createPostElement(post.userName , post.author, post.content, index);
+            const postElement = createPostElement(post.userName, post.author, post.content, index);
             postList.appendChild(postElement);
         });
     }
@@ -16,14 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para criar um novo elemento de postagem
     function createPostElement(userName, author, content, index) {
         const post = document.createElement('article');
-        post.className = 'post';    
-        post.innerHTML = `
-            <h3>${userName}</h3>
-            <p><strong>Destino:</strong> ${author}</p>
-            <p>${content}</p>
-            <button class="delete-btn" data-index="${index}">Excluir</button>`;
-        return post;
-    }
+        if(lastLoggedUser===userName||lastAccess==="admin"){
+            
+            post.className = 'post';
+            post.innerHTML = `
+                <h3>${userName}</h3>
+                <p><strong>Destino:</strong> ${author}</p>
+                <p>${content}</p>
+                <button class="delete-btn" data-index="${index}">Excluir</button>`;
+            return post;
+        }else{
+            
+            post.className = 'post';
+            post.innerHTML = `
+                <h3>${userName}</h3>
+                <p><strong>Destino:</strong> ${author}</p>
+                <p>${content}</p>`;
+            return post; 
+        }
+        }
+    
 
     // Função para salvar postagens no localStorage
     function savePosts(posts) {
@@ -33,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para limpar todas as postagens
     function clearPosts() {
         localStorage.removeItem('posts');
-        postList.innerHTML = ''; // Limpa a lista de postagens na página
+        postList.innerHTML = ''; // Limpa a lista de postagens na página 
     }
 
     // Função para excluir uma postagem específica
@@ -53,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Pegando valores do formulário
         const userName = lastLoggedUser;
-        const access=  localStorage.getItem('lastAccess')
+        const access = localStorage.getItem('lastAccess')
         const author = document.getElementById('author').value;
         const content = document.getElementById('content').value;
 
@@ -81,10 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Exibe o nome do último usuário logado
 const lastLoggedUser = localStorage.getItem('lastLoggedUser');
-const lastAccess=localStorage.getItem('lastAccess')
+const lastAccess = localStorage.getItem('lastAccess')
 // Atualiza o nome do usuário e controla a visibilidade do botão de logout
 if (lastLoggedUser) {
-document.querySelector('.namePost').textContent =lastLoggedUser;
+    document.querySelector('.namePost').textContent = lastLoggedUser;
     document.querySelector('.name').textContent = lastLoggedUser;
     document.getElementById('logoutBtn').style.display = 'inline-block'; // Mostrar botão
 } else {
@@ -94,7 +106,7 @@ document.querySelector('.namePost').textContent =lastLoggedUser;
 }
 
 // Função de logout
-document.getElementById('logoutBtn').addEventListener('click', function() {
+document.getElementById('logoutBtn').addEventListener('click', function () {
     // Remove o usuário logado do localStorage
     localStorage.removeItem('lastLoggedUser');
     localStorage.removeItem('lastAcsses')
