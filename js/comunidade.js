@@ -16,14 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para criar um novo elemento de postagem
     function createPostElement(userName, author, content, index) {
         const post = document.createElement('article');
-        post.className = 'post';
-        post.innerHTML = `
-            <h3>${userName}</h3>
-            <p><strong>Destino:</strong> ${author}</p>
-            <p>${content}</p>
-            <button class="delete-btn" data-index="${index}">Excluir</button>`;
-        return post;
-    }
+        if(lastLoggedUser===userName||lastAccess==="admin"){
+            
+            post.className = 'post';
+            post.innerHTML = `
+                <h3>${userName}</h3>
+                <p><strong>Destino:</strong> ${author}</p>
+                <p>${content}</p>
+                <button class="delete-btn" data-index="${index}">Excluir</button>`;
+            return post;
+        }else{
+            
+            post.className = 'post';
+            post.innerHTML = `
+                <h3>${userName}</h3>
+                <p><strong>Destino:</strong> ${author}</p>
+                <p>${content}</p>`;
+            return post; 
+        }
+        }
+    
 
     // Função para salvar postagens no localStorage
     function savePosts(posts) {
@@ -33,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para limpar todas as postagens
     function clearPosts() {
         localStorage.removeItem('posts');
-        postList.innerHTML = ''; // Limpa a lista de postagens na página
+        postList.innerHTML = ''; // Limpa a lista de postagens na página 
     }
 
     // Função para excluir uma postagem específica
