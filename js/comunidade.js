@@ -1,6 +1,6 @@
 const lastLoggedUser = localStorage.getItem('lastLoggedUser');
 const lastAccess = localStorage.getItem('lastAccess');
-
+console.log(lastAccess)
 document.addEventListener('DOMContentLoaded', () => {
     const postForm = document.getElementById('post-form');
     const postList = document.getElementById('post-list');
@@ -19,13 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function createPostElement(userName, author, content, index) {
         const post = document.createElement('article');
         post.className = 'post';
-        const isAdmin = String(lastAccess) === "admin"; // Garante que lastAccess seja uma string para comparação
     
         post.innerHTML = `
             <h3>${userName}</h3>
             <p><strong>Destino:</strong> ${author}</p>
             <p>${content}</p>
-            ${(lastLoggedUser === userName || isAdmin) ? `<button class="delete-btn" data-index="${index}">Excluir</button>` : ''}
+            ${(lastLoggedUser === userName || lastAccess==="admin") ? `<button class="delete-btn" data-index="${index}">Excluir</button>` : ''}
         `;
         return post;
     }
