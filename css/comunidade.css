@@ -144,7 +144,7 @@ nav ul a:hover::after {
 }
 
 
-.name {
+#name {
     color: white;
     padding-inline: 10px;
 }
@@ -215,11 +215,6 @@ nav ul a:hover::after {
     margin: 0 auto;
     text-align: center;
 }
-.namePost{
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-}
 .exp{
     color: #334A00;
     font-size: 25px;
@@ -235,7 +230,7 @@ nav ul a:hover::after {
 
 /*-------------------------------------------Início Formulário---------------------------------------*/
 
-.post-form {
+form {
     background-color:  #cad3c8;
             border: 1px solid  #9ebda4d2;
             border-radius: 5px;

@@ -13,12 +13,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
     if (validUser) {
         // Armazena o último usuário logado
-        sessionStorage.setItem('lastLoggedUser',validUser.username);
-        sessionStorage.setItem('lastAccess',validUser.access)
+        localStorage.setItem('lastLoggedUser',validUser.username);
+  
        
         // Redireciona para a página comunidade.html
         window.location.href = 'index.html';
     } else {
        
     }
-  });   
+  });

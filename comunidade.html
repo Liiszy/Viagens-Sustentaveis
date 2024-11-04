@@ -22,7 +22,7 @@
                         <li><a href="#">Comunidade Online</a></li>
                         <li><a href="#">Quem Somos</a></li>
                     </ul>
-                    <span class="name"></span>
+                    <span id="name"></span>
                     <a href="login.html" class="login-icon">
                         <i class="fa-solid fa-user"></i>
                     </a>
@@ -60,18 +60,17 @@
 
                 <!--Form-->
                 <section class="carousel"></section>
-                <div class="post-form">  
-                    <h3 class="compartilhe">Compartilhe sua experiência</h3>
-                    <span class="namePost"></span> 
                     <form id="post-form">
-                        
+                        <h3 class="compartilhe">Compartilhe sua experiência</h3>
+                        <label for="title">Nome:</label>
+                        <input type="text" id="title" required>
                         <label for="author">Destino:</label>
                         <input type="text" id="author" required>
                         <label for="content">Experiência:</label>
                         <textarea id="content" rows="4" required></textarea>
                         <button type="submit">Publicar</button>
                     </form>
-                </div>
+                
                 </section>
                 <section id="posts" class="container"></section>
                     <h2 class="exp">Experiências Recentes</h2>

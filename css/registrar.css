@@ -1,144 +1,144 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('.././img/menu.jpg') no-repeat center center/cover; /* Fundo como na imagem fornecida */
-  }
-  
-  .wrapper {
-    width: 100%;
-    max-width: 400px;
-    width: 420px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
-  backdrop-filter: blur(9px);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('.././img/menu.jpg') no-repeat center center/cover; /* Fundo como na imagem fornecida */
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  width: 420px;
+background: transparent;
+border: 2px solid rgba(255, 255, 255, .2);
+backdrop-filter: blur(9px);
+color: #fff;
+border-radius: 12px;
+padding: 30px 40px;
+}
+
+form {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
   color: #fff;
-  border-radius: 12px;
-  padding: 30px 40px;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+  color: #fff;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+}
+
+.input-box input:focus {
+  background: rgba(255, 255, 255, 0.2); /* Foco */
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #f1f1f1;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.register-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade para telas com max-width de 767px */
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
   }
   
-  form {
-    width: 100%;
+  .wrapper h1 {
+    font-size: 28px;
   }
   
-  h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  
-  .input-box {
-    position: relative;
-    margin-bottom: 30px;
+  .wrapper .input-box {
+    height: 45px;
+    margin: 20px 0;
   }
   
   .input-box input {
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
-    color: #fff;
-    font-size: 16px;
-    transition: background 0.3s ease;
-  }
-  
-  .input-box input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    padding: 15px 35px 15px 15px;
   }
   
   .input-box i {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 20px;
+    font-size: 18px;
   }
   
-  .input-box input:focus {
-    background: rgba(255, 255, 255, 0.2); /* Foco */
+  .wrapper .btn {
+    height: 40px;
+    font-size: 14px;
   }
   
-  .btn {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
-    background: #fff;
-    color: #333;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  .wrapper .remember-forgot {
+    font-size: 13px;
+    margin: -10px 0 10px;
   }
   
-  .btn:hover {
-    background: #f1f1f1;
+  .wrapper .register-link {
+    font-size: 13px;
   }
-  
-  .register-link {
-    text-align: center;
-    margin-top: 20px;
   }
-  
-  .register-link p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .register-link a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-  
-/* Responsividade para telas com max-width de 767px */
-@media screen and (max-width: 767px) {
-    .wrapper {
-      width: 90%;
-      padding: 20px;
-    }
-    
-    .wrapper h1 {
-      font-size: 28px;
-    }
-    
-    .wrapper .input-box {
-      height: 45px;
-      margin: 20px 0;
-    }
-    
-    .input-box input {
-      font-size: 14px;
-      padding: 15px 35px 15px 15px;
-    }
-    
-    .input-box i {
-      font-size: 18px;
-    }
-    
-    .wrapper .btn {
-      height: 40px;
-      font-size: 14px;
-    }
-    
-    .wrapper .remember-forgot {
-      font-size: 13px;
-      margin: -10px 0 10px;
-    }
-    
-    .wrapper .register-link {
-      font-size: 13px;
-    }
-    }
