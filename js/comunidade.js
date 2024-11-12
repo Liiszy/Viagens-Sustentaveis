@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             // Pegando valores do formulário
-            
+            const userName= lastLoggedUser
             const author = document.getElementById('author').value;
             const content = document.getElementById('content').value;
 

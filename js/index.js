@@ -10,12 +10,12 @@ if (lastLoggedUser) {
 } else {
     document.getElementById('name').textContent;
     document.getElementById('logoutBtn').style.display = 'none'; // Ocultar botão
-    
+
 
 }
 
 // Função de logout
-document.getElementById('logoutBtn').addEventListener('click', function() {
+document.getElementById('logoutBtn').addEventListener('click', function () {
     // Remove o usuário logado do localStorage
     localStorage.removeItem('lastLoggedUser');
     localStorage.removeItem('lastAccess')
@@ -24,4 +24,9 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
     window.location.href = 'index.html'; // Redireciona para a página de login
 });
 
-
+const login=document.querySelector(".icone")
+if(lastLoggedUser!==""){
+    
+}else{
+    
+}
