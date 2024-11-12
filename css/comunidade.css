@@ -144,7 +144,7 @@ nav ul a:hover::after {
 }
 
 
-.name {
+#name {
     color: white;
     padding-inline: 10px;
 }
