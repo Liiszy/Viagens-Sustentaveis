@@ -3,7 +3,14 @@
 
 
 /*-------------------------------------------Tags Gerais---------------------------------------*/
+logged {
 
+    pointer-events: none;
+    cursor: default;
+
+
+
+}
 * {
     margin: 0;
     padding: 0;

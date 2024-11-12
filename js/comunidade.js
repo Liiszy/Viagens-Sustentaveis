@@ -1,4 +1,4 @@
-const lastLoggedUser = localStorage.getItem('lastLoggedUser');
+
 const lastAccess = localStorage.getItem('lastAccess');
 console.log(lastAccess)
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             // Pegando valores do formulário
-            const userName = lastLoggedUser;
+            
             const author = document.getElementById('author').value;
             const content = document.getElementById('content').value;
 
@@ -79,23 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Exibe o nome do último usuário logado
-if (lastLoggedUser) {
-    document.querySelector('.namePost').textContent = lastLoggedUser;
-    document.querySelector('.name').textContent = lastLoggedUser;
-    document.getElementById('logoutBtn').style.display = 'inline-block'; // Mostrar botão
-} else {
-    document.querySelector('.namePost').textContent = '';
-    document.querySelector('.name').textContent = '';
-    document.getElementById('logoutBtn').style.display = 'none'; // Ocultar botão
-}
-
-// Função de logout
-document.getElementById('logoutBtn').addEventListener('click', function () {
-    // Remove o usuário logado do localStorage
-    localStorage.removeItem('lastLoggedUser');
-    localStorage.removeItem('lastAccess');
-
-    // Redireciona para a página de login
-    window.location.href = 'index.html';
-});
