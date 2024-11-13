@@ -20,13 +20,15 @@ document.getElementById('logoutBtn').addEventListener('click', function () {
     localStorage.removeItem('lastLoggedUser');
     localStorage.removeItem('lastAccess')
 
+
     // Redireciona para a página de login
     window.location.href = 'index.html'; // Redireciona para a página de login
 });
 
-const login=document.querySelector(".icone")
-if(lastLoggedUser!==""){
-    
+const login=document.querySelector(".login-icon")
+if(lastLoggedUser&&lastLoggedUser!==""){
+    login.classList.add("logged")
 }else{
-    
+    login.classList.remove("logged")
 }
+    
