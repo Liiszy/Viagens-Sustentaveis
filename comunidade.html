@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/comunidade.css">
 </head>
-<body>
+<body onload="estados()">
     
 
     <!-- Cabeçalho Início -->
@@ -20,7 +20,7 @@
                         <li><a href="index.html">Início</a></li>
                         <li><a href="#">Notícias</a></li>
                         <li><a href="viagem.html">Turismo Sustentável</a></li>
-                        <li><a href="#">Comunidade Online</a></li>
+                        <li><a href="comunidade.html">Comunidade Online</a></li>
                         <li><a href="#">Quem Somos</a></li>
                     </ul>
                     <span id="name"></span>
@@ -28,7 +28,6 @@
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <button id="logoutBtn"  style="display: none;">Sair</button>
-                
                 </nav>
                 <section class="banner">
                     <div class="textobanner">
@@ -58,16 +57,20 @@
                             <p>Junte-se a nós nessa jornada e descubra como pequenas ações podem fazer uma grande diferença!</p>
                     </div>
                 </section>
-
+              
                 <!--Form-->
                 <section class="carousel"></section>
                 <div class="post-form">  
                     <h3 class="compartilhe">Compartilhe sua experiência</h3>
                     <span class="namePost"></span> 
                     <form id="post-form">
-                        
-                        <label for="author">Destino:</label>
-                        <input type="text" id="author" required>
+                       
+                        <div for="author">Destino:
+                                <div class="estcid">
+                                    <select name="estados" id="estados" onchange="cidades()"></select>
+                                    <select name="cidades" id="cidades"> </select>
+                                </div>
+                            </div>
                         <label for="content">Experiência:</label>
                         <textarea id="content" rows="4" required></textarea>
                         <button type="submit">Publicar</button>

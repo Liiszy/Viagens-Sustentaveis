@@ -55,12 +55,14 @@ nav {
     justify-content: space-between;
     padding-top: 10px;
     text-align: center;
+  
 }
 nav ul {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 5px;
+ 
 }
 nav ul a {
     color: rgb(255, 255, 255);
@@ -69,7 +71,7 @@ nav ul a {
     text-transform: uppercase;
     display: block;
     font-weight: 400;
-    
+   
 }
 nav ul a::after {
     content: "";
@@ -89,6 +91,7 @@ nav ul a:hover::after {
     padding: 0;
     flex: 1; 
     justify-content: center; 
+    text-decoration: none;
 }
 .login-icon {
     font-size: 15px; 
@@ -155,18 +158,18 @@ nav ul a:hover::after {
     font-weight: 400;
     color: white;
     background-color: transparent;
+    border: 2px solid white; /* Define espessura e cor da borda */
     border-radius: 50px;
-    border-color: white;
-    
     padding: 3px 13px;
     cursor: pointer;
-  
 }
+
 #logoutBtn:hover {
-    border-color:  #193b127d;
+    border-color: #193b127d; /* Altera apenas a cor da borda ao passar o mouse */
     color: white;
     transition: ease-in-out 0.4s;
 }
+
 
 /*-------------------------------------------Início Contéudo---------------------------------------*/
 
@@ -187,6 +190,7 @@ nav ul a:hover::after {
     font-size: 35px;
     margin-top: 0;
     color: #334A00;
+    justify-content: start  ;
 }
 .contentmain p {
     margin-bottom: 5px;
@@ -261,12 +265,13 @@ form textarea {
 }
 form button {
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 8px 16px;
     background: #2a5e33;
     border-radius: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
+    font-size: 14px;
 }
 form button:hover {
     background: #1a4821;
@@ -274,16 +279,17 @@ form button:hover {
 }
 #post-list h3{
     font-size: 25px;
-
 }
+
 .delete-btn {
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 8px 16px;
     background: #2a5e33;
     border-radius: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
+    font-size: 14px;
 }
 .delete-btn:hover {
     background: #1a4821;
@@ -414,7 +420,18 @@ footer ul a{
 
 
         /* ----- Responsividade Contéudo  ----- */
-
+        
+        .post-form {
+            background-color:  #cad3c8;
+                    border: 1px solid  #9ebda4d2;
+                    border-radius: 5px;
+                    padding: 20px; 
+                    margin:  0px;  
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    .response-form-container{
+        align-items: start;
+    }
     .conteinermain {
         padding: 15px;
     }
@@ -424,7 +441,8 @@ footer ul a{
     }
     
     #bv {
-        font-size: 24px;
+        font-size: 21px;
+        text-align: start;
     }
     
     .contentmain p {
@@ -448,10 +466,7 @@ footer ul a{
         font-size: 20px;
     }
     
-    form {
-        padding: 15px;
-        margin: 10px 0;
-    }
+   
     
     form button {
         padding: 8px 12px;
@@ -462,8 +477,8 @@ footer ul a{
     }
 }
 
-/* Responsividade para telas com min-width: 768px e max-width: 1023px */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Responsividade para telas com min-width: 768px e max-width: 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
     /* ----- Responsividade Cabeçalho  ----- */
     .menu {
@@ -544,7 +559,9 @@ footer ul a{
     }
 
     /* ----- Responsividade Contéudo  ----- */
-
+    .post-form {
+                margin:  10px;          
+    }
     .conteinermain {
         padding: 20px;
     }
@@ -554,7 +571,8 @@ footer ul a{
     }
 
     #bv {
-        font-size: 28px;
+        font-size: 30px;
+        text-align: start;
     }
 
     .contentmain p {
@@ -578,11 +596,6 @@ footer ul a{
         font-size: 22px;
     }
 
-    form {
-        padding: 15px;
-        margin: 10px;
-    }
-
     form button {
         padding: 8px 12px;
     }
@@ -590,4 +603,87 @@ footer ul a{
     #post-list h3 {
         font-size: 22px;
     }
+}
+/* Estilo para os botões */
+button {
+    background-color: #2a5e33; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 4px 8px; /* Botões menores */
+    font-size: 12px; /* Tamanho de fonte reduzido */
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Alterando a cor ao passar o mouse */
+button:hover {
+    background-color: #1a4821;
+}
+
+/* Estilo específico para o botão "Responder" */
+button.reply-btn {
+    padding: 8px 16px; /* Tamanho do botão "Responder" */
+    font-size: 14px; /* Tamanho da fonte do botão "Responder" */
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+/* Estilo para o bloco de respostas */
+.responses {
+    background-color: #9ebda4d2; /* Cor do fundo */
+    border: 1px solid #2a5e33; /* Borda para diferenciar do post */
+    padding: 10px;
+    margin-right: 10px; /* Espaçamento leve para a direita */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: none; /* Inicialmente oculto */
+    margin-top: 10px; /* Espaçamento entre o botão de ocultar e as respostas */
+}
+
+/* Quando houver respostas, o fundo ficará visível */
+.responses:not(:empty) {
+    display: block;
+}
+
+/* Organizando o botão de Mostrar/Ocultar Comentários acima das respostas e botões */
+.responses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre os elementos dentro da container */
+}
+
+/* Garantir que o botão de mostrar/ocultar sempre fique acima dos outros */
+.toggle-responses-btn {
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    padding: 6px 12px; /* Ajuste de padding para o botão de mostrar/ocultar */
+    font-size: 13px; /* Ajuste no tamanho da fonte */
+    margin-bottom: 5px; /* Espaçamento abaixo do botão */
+}
+
+textarea{
+    resize: none;
+    width: 100%; /* Preenche a largura disponível */
+     /* Define uma altura fixa */
+    box-sizing: border-box; /* Garante que o padding não ultrapasse o tamanho total */
+}
+.post {
+    max-width: 100%; /* Limita a largura do post para 100% do contêiner */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garantir que padding e border não ultrapassem a largura */
+    overflow-wrap: break-word; /* Garante que o texto longo que não cabe seja quebrado para a linha seguinte */
+    word-wrap: break-word; /* Para navegadores mais antigos, mas está em desuso */
+}
+
+.post p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word; /* Quebra a palavra se necessário */
+    white-space: normal; /* Garante que o texto tenha quebras de linha apropriadas */
+}
+
+.caixa-resposta{
+    margin: 10px;
 }
