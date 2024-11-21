@@ -34,7 +34,9 @@
     color: #fff;
     margin-bottom: 30px;
   }
-  
+  .invisible{
+    background-color: #f1f1f1;
+  }
   .input-box {
     position: relative;
     margin-bottom: 30px;

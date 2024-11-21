@@ -25,10 +25,13 @@ document.getElementById('logoutBtn').addEventListener('click', function () {
     window.location.href = 'index.html'; // Redireciona para a página de login
 });
 
-const login=document.querySelector(".login-icon")
-if(lastLoggedUser&&lastLoggedUser!==""){
-    login.classList.add("logged")
-}else{
-    login.classList.remove("logged")
-}
+    const login=document.querySelector(".login-icon")
+    if(lastLoggedUser&&lastLoggedUser!==""){
+        login.classList.add("logged")
+        console.log("logado")
+    }else{
+        login.classList.remove("logged")
+        console.log("empty")
+    } 
+
     
