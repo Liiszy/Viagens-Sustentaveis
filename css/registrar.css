@@ -12,7 +12,12 @@
     align-items: center;
     background: url('.././img/menu.jpg') no-repeat center center/cover; /* Fundo como na imagem fornecida */
   }
-  
+  .erro{
+    background-color: white ;
+    ul{
+      color: red;
+    }
+  }
   .wrapper {
     width: 100%;
     max-width: 400px;
