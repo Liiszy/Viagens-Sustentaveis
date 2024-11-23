@@ -39,7 +39,13 @@
     color: #fff;
     margin-bottom: 30px;
   }
- 
+ .username-error::placeholder{
+color: red;
+  }
+ #name {
+  padding-left: 10px;
+  color: red;
+ }
   .input-box {
     position: relative;
     margin-bottom: 30px;
@@ -59,6 +65,7 @@
   
   .input-box input::placeholder {
     color: rgba(255, 255, 255, 0.7);
+  
   }
   
   .input-box i {
