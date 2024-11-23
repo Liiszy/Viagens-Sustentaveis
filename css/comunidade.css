@@ -3,17 +3,7 @@
 
 
 /*-------------------------------------------Tags Gerais---------------------------------------*/
-.logged {
 
-    pointer-events: none;
-    cursor: default;
-    font-size: 15px; 
-    margin-left: auto; 
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-    padding-right: 10px;
-
-}
 * {
     margin: 0;
     padding: 0;
@@ -697,3 +687,46 @@ textarea{
 .caixa-resposta{
     margin: 10px;
 }
+.response-form-container form {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos na coluna */
+    gap: 10px; /* Espaçamento entre os elementos */
+    align-items: stretch; /* Garante que os botões se alinhem à largura do formulário */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.delete-btn, button[type="submit"] {
+    padding: 8px 16px;
+    
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+.toggle-responses-btn {
+    background-color: #2a5e33;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-responses-btn:hover {
+    background: #1a4821;
+}
+.no-comments-message {
+    color:black;
+    font-style: italic;
+    margin-top: 10px;
+}
+

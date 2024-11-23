@@ -10,7 +10,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const confirmPassword = document.getElementById('confirmPassword').value;
  
 //ALERTAS
-const erros= document.querySelector("error-list")
+const erros= document.querySelector("#error-list")
 const caixa=document.querySelector(".erro")
 erros.innerHTML=""
 
@@ -42,25 +42,21 @@ if(confirmPassword.value==""){
         caixa.classList.remove("hide")
     }else{
         caixa.classList.add("hide")
-        evt.target.submit()
-        //form.submit()
     }
     
-
-
-
-
-
-
-
-
-    // Adiciona o novo usuário ao array
-    users.push({ email: email, password: password, username: username,access:"public"});
+ 
+        // Adiciona o novo usuário ao array
+        users.push({ email: email, password: password, username: username,access:"public"});
   
-    // Armazena o array de usuários de volta no localStorage
-    localStorage.setItem('users', JSON.stringify(users));
-  
-   ;
-    // Redireciona para a página de login
-    window.location.href = 'login.html';
+        // Armazena o array de usuários de volta no localStorage
+        localStorage.setItem('users', JSON.stringify(users));
+      
+       ;
+        // Redireciona para a página de login
+        window.location.href = 'login.html';
+            //form.submit()
+      
+
+
+    
   });  
