@@ -1,3 +1,5 @@
+//criar função assync para smp q abrir ja criar esses arrays e mais um com td vazio para empedir esse tipo de cadatros
+
 let users = JSON.parse(localStorage.getItem('users')) || [];
 users.push({ email: "campergames68@gmail.com", password: "1234", username: "ADM",access:"admin"});
 
