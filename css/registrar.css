@@ -12,12 +12,7 @@
     align-items: center;
     background: url('.././img/menu.jpg') no-repeat center center/cover; /* Fundo como na imagem fornecida */
   }
-  .erro{
-    background-color: white ;
-    ul{
-      color: red;
-    }
-  }
+
   .wrapper {
     width: 100%;
     max-width: 400px;
@@ -39,14 +34,23 @@
     color: #fff;
     margin-bottom: 30px;
   }
- 
+
+ .username-error::placeholder{
+color: red;
+  }
+  .erro {
+    color: red;
+    padding-left: 10px; 
+    background-color: transparent; 
+    font-weight: bolder;
+  }
   .input-box {
     position: relative;
     margin-bottom: 30px;
   }
   
   .input-box input {
-    width: 100%;
+    width: 100%; /* Garante largura consistente */
     padding: 10px 40px 10px 10px;
     border: none;
     border-radius: 30px;
@@ -55,12 +59,29 @@
     color: #fff;
     font-size: 16px;
     transition: background 0.3s ease;
+    box-sizing: border-box; /* Inclui padding na largura */
   }
-  
+  .input-box span.erro {
+    position: absolute;
+    top: 100%; /* Alinha abaixo do input */
+    left: 10px;
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 5px;
+    background-color: transparent; /* Evita interferência visual */
+  }
+
   .input-box input::placeholder {
     color: rgba(255, 255, 255, 0.7);
+  
   }
   
+  .input-box input:focus {
+    background: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao focar */
+  }
+  
+
   .input-box i {
     position: absolute;
     right: 15px;
@@ -113,6 +134,10 @@
     .wrapper {
       width: 90%;
       padding: 20px;
+    }
+    
+    .input-box span.erro {
+      font-size: 10px;
     }
     
     .wrapper h1 {

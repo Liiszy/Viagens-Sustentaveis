@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         localStorage.setItem('lastAccess',validUser.access)
        
         // Redireciona para a página comunidade.html
-        window.location.href = 'index.html';
+       event.target.submit();
     } else {
        
     }

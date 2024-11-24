@@ -1,62 +1,65 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
-users.push({ email: "campergames68@gmail.com", password: "1234", username: "ADM",access:"admin"});
 
+// Adiciona o usuário "ADM" apenas se ainda não estiver no array
+if (!users.some(user => user.email === "campergames68@gmail.com")) {
+    users.push({ email: "campergames68@gmail.com", password: "1234", username: "ADM", access: "admin" });
+    localStorage.setItem('users', JSON.stringify(users)); // Atualiza o localStorage
+}
+
+// Manipula o evento de submissão do formulário
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio do formulário tradicional
-    // Pega os valores dos campos de entrada
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
- 
-//ALERTAS
-const erros= document.querySelector("#error-list")
-const caixa=document.querySelector(".erro")
-erros.innerHTML=""
 
-if(username.value==""){
-    erros.innerHTML+="<li>Preencha com seu Nome!</li>"
-}
-if(email.value==""){
-    erros.innerHTML+="<li>Preencha com um Email válido!</li>"
-}
-if(password.value==""){
-    erros.innerHTML+="<li>Preencha uma senha de no minimo 4 digítos!</li>"
-}
-if(confirmPassword.value==""){
-    erros.innerHTML+="<li>Preencha com a mesma senha do campo a cima!</li>"
+    // Pega os valores dos campos de entrada
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+    // Elementos de erro
+    const erro = document.querySelectorAll(".erro");
+    const userErro = document.querySelector(".name");
+    const emailErro = document.querySelector(".email");
+    const passwordErro = document.querySelector(".password");
+    const confirmPasswordErro = document.querySelector(".passwordConfirm");
+ 
+    if (userErro) userErro.innerHTML = "";
+    if (emailErro) emailErro.innerHTML = "";
+    if (confirmPasswordErro) confirmPasswordErro.innerHTML = "";
+    
+   if(!username){
+    userErro.innerHTML = "Preencha com seu Nome!";
+   }
+   if(!email){
+   emailErro.innerHTML="Preencha com um E-Mail válido!"
+   }
+if(password.length<8){
+    passwordErro.innerHTML="A senha deve conter no mínimo 8 caracteres.";
+    return;
 }
     // Verifica se as senhas são iguais
     if (password !== confirmPassword) {
-        erros.innerHTML+="<li>As senhas não coencidem</li>"
-        return; // Para o processo aqui se as senhas não forem iguais
+        confirmPasswordErro.innerHTML = "As senhas não coincidem!";
+        return; // Para o processo aqui
     }
+
     // Verifica se o email de usuário já existe
     const userExists = users.some(user => user.email === email);
     if (userExists) {
-       erros.innerHTML+="<li>Este Email ja está cadastrado!</li>"
-        return;
+        emailErro.innerHTML = "Email já cadastrado!";
+    return; // Para o processo aqui
     }
-  
-    if(erros!=""){
-        caixa.classList.remove("hide")
-    }else{
-        caixa.classList.add("hide")
-    }
-    
- 
-        // Adiciona o novo usuário ao array
-        users.push({ email: email, password: password, username: username,access:"public"});
-  
-        // Armazena o array de usuários de volta no localStorage
-        localStorage.setItem('users', JSON.stringify(users));
-      
-       ;
-        // Redireciona para a página de login
-        window.location.href = 'login.html';
-            //form.submit()
-      
+    if (!username || !email || !password || !confirmPassword) {
+        
+       
+       return; // Para o processo aqui
+   }
+    // Adiciona o novo usuário ao array
+    users.push({ email: email, password: password, username: username, access: "public" });
 
+    // Armazena o array de usuários de volta no localStorage
+    localStorage.setItem('users', JSON.stringify(users));
 
-    
-  });  
+    // Redireciona para a página de login
+   event.target.submit();
+});
