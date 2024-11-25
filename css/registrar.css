@@ -38,11 +38,12 @@
  .username-error::placeholder{
 color: red;
   }
+  
   .erro {
     color: red;
     padding-left: 10px; 
     background-color: transparent; 
-    font-weight: bolder;
+    font-weight: bold;
   }
   .input-box {
     position: relative;

@@ -28,25 +28,25 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     if (confirmPasswordErro) confirmPasswordErro.innerHTML = "";
     
    if(!username){
-    userErro.innerHTML = "Preencha com seu Nome!";
+    userErro.innerHTML = "*Preencha com seu Nome!";
    }
    if(!email){
-   emailErro.innerHTML="Preencha com um E-Mail válido!"
+   emailErro.innerHTML="*Preencha com um E-Mail válido!"
    }
 if(password.length<8){
-    passwordErro.innerHTML="A senha deve conter no mínimo 8 caracteres.";
+    passwordErro.innerHTML="*A senha deve conter no mínimo 8 caracteres.";
     return;
 }
     // Verifica se as senhas são iguais
     if (password !== confirmPassword) {
-        confirmPasswordErro.innerHTML = "As senhas não coincidem!";
+        confirmPasswordErro.innerHTML = "*As senhas não coincidem!";
         return; // Para o processo aqui
     }
 
     // Verifica se o email de usuário já existe
     const userExists = users.some(user => user.email === email);
     if (userExists) {
-        emailErro.innerHTML = "Email já cadastrado!";
+        emailErro.innerHTML = "*Email já cadastrado!";
     return; // Para o processo aqui
     }
     if (!username || !email || !password || !confirmPassword) {
