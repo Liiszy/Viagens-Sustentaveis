@@ -40,12 +40,15 @@ body{
   margin: 30px 0;
 }
 .erro {
-  padding-top: 30px;
-  color: red;
-  padding-left: 10px; 
-  background-color: transparent; 
-  font-weight: bold;
+  margin-top: 15px; /* Espaçamento do h1 */
+  margin-bottom: 10px; /* Espaçamento do input abaixo */
+  text-align: center; /* Centraliza o texto */
+  color: #ff4d4d; /* Vermelho suave para o texto */
+  background-color: transparent; /* Fundo transparente */
+  font-size: 14px; /* Tamanho de fonte moderado */
+  font-weight: 500; /* Peso intermediário */
 }
+
 .input-box input{
   width: 100%;
   height: 100%;
